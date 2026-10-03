@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bers"
+version = "0.1.0"
+description = "Business Entity Resolution System (BERS)"
+authors = [
+    {name = "Competition Participant"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas==2.1.1",
+    "scikit-learn==1.3.1",
+    "lightgbm==4.1.0",
+    "PyYAML==6.0.1",
+    "pyarrow==14.0.1"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==7.4.2",
+    "pytest-cov==4.1.0"
+]
+
+[project.scripts]
+bers-prepare = "bers.cli.prepare_data:main"
+bers-block = "bers.cli.run_blocking:main"
+bers-train = "bers.cli.train_model:main"
+bers-infer = "bers.cli.run_inference:main"
+bers-evaluate = "bers.cli.evaluate_holdout:main"
+bers-validate = "bers.cli.validate_submission:main"
+bers-package = "bers.cli.package_submission:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
