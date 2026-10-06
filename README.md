@@ -11,7 +11,7 @@ A scalable, Python-based entity resolution pipeline for matching noisy, unstruct
 - **Streaming, OOM-Safe Inference:** Processes candidate pairs and features in configurable chunks (default 300,000 rows) with explicit garbage collection to stay within memory limits.
 - **Singleton-Aware Matching:** Handles entities with zero, one, or multiple corresponding records.
 - **Fallback Heuristic Matchers:** Includes secondary exact-match matchers built on deep regex normalization, useful as baselines or when the model is unavailable.
-- **Validated Outputs:** Generates candidate and final matching results with schemavalidation.
+- **Validated Outputs:** Generates candidate and final matching results with schema validation.
 
 ## Tech Stack
 
