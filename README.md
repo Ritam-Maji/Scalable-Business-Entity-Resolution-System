@@ -15,7 +15,7 @@ A scalable, Python-based entity resolution pipeline for matching noisy, unstruct
 
 ## Tech Stack
 
-Python, Pandas, NumPy, PyArrow, Parquet, LightGBM, Scikit-learn, RapidFuzz, pytest, Jupyter,Git
+Python, Pandas, NumPy, PyArrow, Parquet, LightGBM, Scikit-learn, RapidFuzz, pytest, Jupyter, Git
 
 ## Pipeline Architecture
 
